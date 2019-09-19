@@ -30,11 +30,11 @@ public class SearchServlet extends HttpServlet {
 
             conn = DriverManager.getConnection(DRIVER + path, USER, PW);
 
-            pstmt = conn.prepareStatement("SELECT char_nm FROM Characters WHERE char_nm = ?");
+            pstmt = conn.prepareStatement("SELECT char_nm FROM Characters WHERE char_nm LIKE ?");
 
             String searchTerm = request.getParameter("searchTerm");
 
-            pstmt.setString(1, searchTerm);
+            pstmt.setString(1, "%" + searchTerm + "%");
 
             rset = pstmt.executeQuery();
 
