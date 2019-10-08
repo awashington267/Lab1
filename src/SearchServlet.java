@@ -54,5 +54,6 @@ public class SearchServlet extends HttpServlet {
         }catch (ClassNotFoundException | SQLException ex){
             response.getWriter().print(ex.getMessage());
         }
+
     }
 }
