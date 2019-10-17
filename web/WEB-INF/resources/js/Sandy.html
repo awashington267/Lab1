@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>Title</title>
 </head>
 <body>
 
 <nav class="navigation">
-    <p class="menu-item"><a href="index.html">Home</a></p>
+    <p class="menu-item"><a href="home.html">Home</a></p>
     <p class="menu-item"><a href="Characters.html">Characters</a></p>
     <p class="menu-item"><a href="CharactersDetails.html">Locations</a></p>
     <p class="menu-item"><a href="Songs.html">Songs</a></p>
@@ -17,25 +17,25 @@
 </nav>
 
 <form>
-    <div class="CharacterDetails">
+    <div>
 
         <div class="CharacterInfo">
             <header>
-                <h1>Patrick</h1>
+                <h1>Sandy</h1>
             </header>
-            <img src="images/Buff_Patrick.jpg" height="200" width="300" alt="Patrick Star"/>
+            <img src="../img/Sandy_Cheeks.jpg" height="200" width="300" alt="Sandy"/>
             <label for="characterName">Name</label>
-            <input type="text" name="characterName" id="characterName" value="Patrick Star" disabled/>
+            <input type="text" name="characterName" id="characterName" value="Sandy" disabled/>
             <br>
             <label for="characterClass">Class</label>
-            <input type="text" name="characterClass" id="characterClass" value="Tank" disabled/>
+            <input type="text" name="characterClass" id="characterClass" value="Damage" disabled/>
             <br>
             <label for="characterSex">Sex</label>
-            <input type="text" name="characterSex" id="characterSex" value="Male" disabled/>
+            <input type="text" name="characterSex" id="characterSex" value="Female" disabled/>
             <label for="characterBio">Bio</label>
         </div>
         <div class="CharacterBio">
-            <input type="text" name="characterBio" id="characterBio" value="Likes to adopt pet rocks and race them" disabled/>
+            <input type="text" name="characterBio" id="characterBio" value="Is a genius but also likes to Karate chop faces." disabled/>
         </div>
         <Strong class="User"><p class="User">Create your Username and choose a Realm below.</p></Strong>
         <strong class="User">Username:</strong> <input type="text" name="Username" minlength="3" maxlength="12" required/>
@@ -45,9 +45,10 @@
         <option value="Chum_Bucket">Chum Bucket</option>
         <option value="Pineapple">Pineapple</option>
         <option value="Krust_Krab">Krusty Krab</option>
-    </select>
+        </select>
         <br>
         <input type="submit"/>
+
     </div>
 </form>
 </body>
