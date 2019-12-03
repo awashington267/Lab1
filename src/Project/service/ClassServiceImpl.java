@@ -1,7 +1,7 @@
-package service;
+package Project.service;
 
 
-import DAO.ClassDAO;
+import Project.DAO.ClassDAO;
 import hibernate.entity.Class;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

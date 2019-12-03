@@ -1,6 +1,6 @@
-package DAO;
+package Project.DAO;
 
-import hibernate.entity.Characters;
+import hibernate.entity.Class;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,50 +10,49 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class CharactersDAOImpl implements CharactersDAO {
+public class ClassDAOImpl implements ClassDAO{
     @Autowired
     private SessionFactory sessionFactory;
 
 
     @Override
-    public List<Characters> getCharacters() {
+    public List<Class> getRole() {
         Session session = sessionFactory.getCurrentSession();
-        List<Characters> list = session.createQuery("from Characters", Characters.class).getResultList();
+        List<Class> list = session.createQuery("from Class", Class.class).getResultList();
 
         return list;
     }
 
     @Override
-    public void saveCharacter(Characters character) {
+    public void saveRole(Class role) {
         Session session = sessionFactory.getCurrentSession();
 
-        session.saveOrUpdate(character);
+        session.saveOrUpdate(role);
     }
 
     @Override
-    public Characters getCharacters(int theId) {
+    public Class getRole(int theId) {
         Session session = sessionFactory.getCurrentSession();
 
-        return session.get(Characters.class, theId);
+        return session.get(Class.class, theId);
     }
 
     @Override
-    public void deleteCharacter(int theId) {
+    public void deleteRole(int theId) {
         Session session = sessionFactory.getCurrentSession();
 
-        Query query = session.createQuery("delete from Characters where characterID = :doomedCharacterId");
+        Query query = session.createQuery("delete from Class where classID = :doomedClassId");
 
-        query.setParameter("doomedCharacterId", theId);
+        query.setParameter("doomedClassId", theId);
 
         query.executeUpdate();
-
     }
 
     @Override
-    public List<Characters> getCharacterByName(String theSearchTerm) {
+    public List<Class> getRoleByName(String theSearchTerm) {
         Session session = sessionFactory.getCurrentSession();
 
-        Query<Characters> query = session.createQuery("from Characters where lower(name) like :searchTerm");
+        Query<Class> query = session.createQuery("from Class where lower(role) like :searchTerm");
 
         theSearchTerm = "%" + theSearchTerm.toLowerCase() + "%";
 

@@ -1,6 +1,6 @@
-package service;
+package Project.service;
 
-import DAO.CharactersDAO;
+import Project.DAO.CharactersDAO;
 import hibernate.entity.Characters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

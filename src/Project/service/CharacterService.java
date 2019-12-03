@@ -1,4 +1,4 @@
-package service;
+package Project.service;
 
 import hibernate.entity.Characters;
 import org.springframework.web.multipart.MultipartFile;

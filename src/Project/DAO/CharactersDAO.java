@@ -1,4 +1,4 @@
-package DAO;
+package Project.DAO;
 
 import hibernate.entity.Characters;
 

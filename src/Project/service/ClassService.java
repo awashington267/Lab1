@@ -1,15 +1,12 @@
-package DAO;
+package Project.service;
 
 import hibernate.entity.Class;
 
 import java.util.List;
 
-public interface ClassDAO {
-
+public interface ClassService {
 
     List<Class> getRole();
-
-    void saveRole(Class role);
 
     Class getRole(int theId);
 
