@@ -19,7 +19,7 @@
 <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
     <!-- JDBC Database connection settings -->
     <property name="driverClass" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-    <property name="jdbcUrl" value="jdbc:derby:#{ servletContext.getRealPath('/') }/../../../db"/>
+    <property name="jdbcUrl" value="jdbc:derby:#{ servletContext.getRealPath('/') }/../../../lib/spongebob"/>
     <property name="user" value="tony"/>
     <property name="password" value="tony"/>
 
